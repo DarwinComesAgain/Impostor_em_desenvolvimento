@@ -1,0 +1,671 @@
+//Impostor (Em desenvolvimento)
+var funReal1, cor, jogaLowerCase, azul, verm, verd, marr, amar, NumCorJogador2, NumCorJogador3, NumCorJogador4, NumCorJogador5, corJogador1, corJogador2, corJogador3, corJogador4, corJogador5, numImpo, corImpo, impo, trip1, trip2, trip3, trip4, funcJogador1, funcJogador2, funcJogador3, funcJogador4, funcJogador5, player1, player2, player3, player4, player5, comAtual1, NumComAtual2, NumComAtual3, NumComAtual4, NumComAtual5, comAtual2, comAtual3, comAtual4, comAtual5, comAtualLC, errocom, comCozinha, comSala, comDispensa, comQuarto, comEscadas, rodadas, maxRodadas;
+alert("Bem vindo ao jogo Impostor, esse jogo possui 10 rodadas");
+cor=prompt("Digite a sua cor (azul, vermelho, verde, marrom, amarelo)");
+jogaLowerCase=cor.toLowerCase();
+azul="azul";
+verm="vermelho";
+verd="verde";
+marr="marrom";
+amar="amarelo";
+numImpo="impostor";
+if (jogaLowerCase=="azul"){
+	corJogador1=azul;
+}
+else if (jogaLowerCase=="vermelho"){
+	corJogador1=verm;
+}
+else if (jogaLowerCase=="verde"){
+	corJogador1=verd;
+}
+else if (jogaLowerCase=="marrom"){
+	corJogador1=marr;
+}
+else if (jogaLowerCase=="amarelo"){
+	corJogador1=amar;
+}
+else {
+	alert("Escolha apenas azul, vermelho, verde, marrom ou amarelo");
+}
+corJogador2="";
+corJogador3="";
+corJogador4="";
+corJogador5="";
+while (true) {
+	NumCorJogador2=Math.ceil(Math.random()*5);
+if (NumCorJogador2==1){
+	corJogador2=azul;
+}else if (NumCorJogador2==2){
+	corJogador2=verm;
+}else if (NumCorJogador2==3){
+	corJogador2=verd;
+}else if (NumCorJogador2==4){
+	corJogador2=marr;
+}else{
+	corJogador2=amar;
+}
+if (corJogador2!=corJogador1){
+	break;
+}}
+while (true) {
+	NumCorJogador3=Math.ceil(Math.random()*5);
+if (NumCorJogador3==1){
+	corJogador3=azul;
+}else if (NumCorJogador3==2){
+	corJogador3=verm;
+}else if (NumCorJogador3==3){
+	corJogador3=verd;
+}else if (NumCorJogador3==4){
+	corJogador3=marr;
+}else{
+	corJogador3=amar;
+}
+if (corJogador3!=corJogador1&&corJogador3!=corJogador2){
+	break;
+}}
+while (true) {
+	NumCorJogador4=Math.ceil(Math.random()*5);
+if (NumCorJogador4==1){
+	corJogador4=azul;
+}else if (NumCorJogador4==2){
+	corJogador4=verm;
+}else if (NumCorJogador4==3){
+	corJogador4=verd;
+}else if (NumCorJogador4==4){
+	corJogador4=marr;
+}else{
+	corJogador4=amar;
+}
+if (corJogador4!=corJogador1&&corJogador4!=corJogador2&&corJogador4!=corJogador3){
+	break;
+}}
+while (true) {
+	NumCorJogador5=Math.ceil(Math.random()*5);
+if (NumCorJogador5==1){
+	corJogador5=azul;
+}else if (NumCorJogador5==2){
+	corJogador5=verm;
+}else if (NumCorJogador5==3){
+	corJogador5=verd;
+}else if (NumCorJogador5==4){
+	corJogador5=marr;
+}else{
+	corJogador5=amar;
+}
+if (corJogador5!=corJogador1&&corJogador5!=corJogador2&&corJogador5!=corJogador3&&corJogador5!=corJogador4){
+	break;
+}}
+numImpo=Math.ceil(Math.random()*5);
+impo="impostor";
+trip1="tripulante";
+trip2="tripulante";
+trip3="tripulante";
+trip4="tripulante";
+if (numImpo==1){
+	corImpo=azul;
+}
+else if (numImpo==2){
+	corImpo=verm;
+}
+else if (numImpo==3){
+	corImpo=verd;
+}
+else if (numImpo==4){
+	corImpo=marr;
+}
+else {
+	corImpo=amar;
+}
+if (corImpo==corJogador1){
+	funcJogador1=impo;
+	funcJogador2=trip1;
+	funcJogador3=trip2;
+	funcJogador4=trip3;
+	funcJogador5=trip4;
+	alert("Voce e impostor");
+} else if (corImpo==corJogador2)  {
+	funcJogador1=trip1;
+	funcJogador2=impo;
+	funcJogador3=trip2;
+	funcJogador4=trip3;
+	funcJogador5=trip4;
+	alert("Voce e tripulante");
+}else if (corImpo==corJogador3)  {
+	funcJogador1=trip1;
+	funcJogador2=trip2;
+	funcJogador3=impo;
+	funcJogador4=trip3;
+	funcJogador5=trip4;
+	alert("Voce e tripulante");
+}else if (corImpo==corJogador4)  {
+	funcJogador1=trip1;
+	funcJogador2=trip2;
+	funcJogador3=trip3;
+	funcJogador4=impo;
+	funcJogador5=trip4;
+	alert("Voce e tripulante");
+} else {
+	funcJogador1=trip1;
+	funcJogador2=trip2;
+	funcJogador3=trip3;
+	funcJogador4=trip4;
+	funcJogador5=impo;
+	alert("Voce e tripulante");
+}
+alert("Jogador 1 = "+corJogador1+"\nJogador 2 = "+corJogador2+"\nJogador 3 = "+corJogador3+"\nJogador 4 = "+corJogador4+"\nJogador 5 = "+corJogador5);
+for (let i = 1; i<10;i++) {
+comCozinha="cozinha";
+comSala="sala";
+comDispensa="dispensa";
+comQuarto="quarto";
+comEscadas="escadas";
+comAtual2="";
+comAtual3="";
+comAtual4="";
+comAtual5="";
+while (true){
+    comAtual1=prompt("Escreva o comodo no qual quer entrar (Cozinha, Sala, Dispensa, Quarto, Escadas) (EM MINUSCULO)");
+	if (comAtual1==comCozinha||comAtual1==comSala||comAtual1==comDispensa||comAtual1==comQuarto||comAtual1==comEscadas){
+	break;
+}
+}
+//Comodo 2
+if (funcJogador2!="Morto") {
+NumComAtual2=Math.ceil(Math.random()*5);
+if (NumComAtual2==1){
+	comAtual2=comCozinha;
+} else if (NumComAtual2==2){
+	comAtual2=comSala;
+} else if (NumComAtual2==3){
+	comAtual2=comDispensa;
+} else if (NumCorJogador2==4){
+	comAtual2=comQuarto;
+} else{
+	comAtual2=comEscadas;
+}}
+//Comodo 3
+if (funcJogador3!="Morto") {
+NumComAtual3=Math.ceil(Math.random()*5);
+if (NumComAtual3==1){
+	comAtual3=comCozinha;
+} else if (NumComAtual3==2){
+	comAtual3=comSala;
+} else if (NumComAtual3==3){
+	comAtual3=comDispensa;
+} else if (NumCorJogador3==4){
+	comAtual3=comQuarto;
+}  else{
+	comAtual3=comEscadas;
+}}
+//Comodo 4
+if (funcJogador4!="Morto") {
+NumComAtual4=Math.ceil(Math.random()*5);
+if (NumComAtual4==1){
+	comAtual4=comCozinha;
+} else if (NumComAtual4==2){
+	comAtual4=comSala;
+} else if (NumComAtual4==3){
+	comAtual4=comDispensa;
+} else if (NumCorJogador4==4){
+	comAtual4=comQuarto;
+} else{
+	comAtual4=comEscadas;
+}}
+//Comodo 5
+if (funcJogador5!="Morto") {
+NumComAtual5=Math.ceil(Math.random()*5);
+if (NumComAtual5==1){
+	comAtual5=comCozinha;
+} else if (NumComAtual5==2){
+	comAtual5=comSala;
+} else if (NumComAtual5==3){
+	comAtual5=comDispensa;
+} else if (NumCorJogador5==4){
+	comAtual5=comQuarto;
+} else{
+	comAtual5=comEscadas;
+}}
+funReal1="";
+//Voce como impostor
+if (funcJogador1==impo){
+	funReal1="impostor";
+	if (comAtual1==comAtual2&&comAtual1==comAtual3&&comAtual1!=comAtual4&&comAtual1!=comAtual5){
+		funcJogador1="Morto";
+		funcJogador2="Morto";
+		funReal1="Morto";
+		alert("Voce mata o "+corJogador2+", porem o "+corJogador3+" te dedura");
+	} else if (comAtual1==comAtual2&&comAtual1!=comAtual3&&comAtual1==comAtual4&&comAtual1!=comAtual5) {
+		funcJogador1="Morto";
+		funcJogador2="Morto";
+		funReal1="Morto";
+		alert("Voce mata o "+corJogador2+", porem o "+corJogador4+" te dedura");
+	} else if (comAtual1==comAtual2&&comAtual1!=comAtual3&&comAtual1!=comAtual4&&comAtual1==comAtual5){
+		funcJogador1="Morto";
+		funcJogador2="Morto";
+		funReal1="Morto";
+		alert("Voce mata o "+corJogador2+", porem o "+corJogador5+" te dedura");
+	} else if (comAtual1!=comAtual2&&comAtual1==comAtual3&&comAtual1==comAtual4&&comAtual1!=comAtual5){
+		funcJogador1="Morto";
+		funcJogador3="Morto";
+		funReal1="Morto";
+		alert("Voce mata o "+corJogador3+", porem o "+corJogador4+" te dedura");
+	} else if (comAtual1!=comAtual2&&comAtual1==comAtual3&&comAtual1!=comAtual4&&comAtual1==comAtual5){
+		funcJogador1="Morto";
+		funcJogador3="Morto";
+		funReal1="Morto";
+		alert("Voce mata o "+corJogador3+", porem o "+corJogador5+" te dedura");
+	} else if (comAtual1!=comAtual2&&comAtual1!=comAtual3&&comAtual1==comAtual4&&comAtual1==comAtual5){
+		funcJogador1="Morto";
+		funcJogador4="Morto";
+		funReal1="Morto";
+		alert("Voce mata o "+corJogador4+", porem o "+corJogador5+" te dedura");
+	} else if (comAtual1==comAtual2&&comAtual1==comAtual3&&comAtual1==comAtual4&&comAtual1!=comAtual5){
+		funcJogador1="Morto";
+		funcJogador2="Morto";
+		funReal1="Morto";
+		alert("Voce mata o "+corJogador2+", porem o "+corJogador3+" e o "+corJogador4+" te deduram");
+	} else if (comAtual1==comAtual2&&comAtual1!=comAtual3&&comAtual1==comAtual4&&comAtual1==comAtual5){
+		funcJogador1="Morto";
+		funcJogador2="Morto";
+		funReal1="Morto";
+		alert("Voce mata o "+corJogador2+", porem o "+corJogador4+" e o "+corJogador5+" te deduram");
+	} else if (comAtual1==comAtual2&&comAtual1==comAtual3&&comAtual1!=comAtual4&&comAtual1==comAtual5){
+		funcJogador1="Morto";
+		funcJogador2="Morto";
+		funReal1="Morto";
+		alert("Voce mata o "+corJogador2+", porem o "+corJogador3+" e o "+corJogador5+" te deduram");
+	} else if (comAtual1!=comAtual2&&comAtual1==comAtual3&&comAtual1==comAtual4&&comAtual1==comAtual5){
+		funcJogador1="Morto";
+		funcJogador3="Morto";
+		funReal1="Morto";
+		alert("Voce mata o "+corJogador3+", porem o "+corJogador4+" e o "+corJogador5+" te deduram");
+	} else if (comAtual1==comAtual2&&comAtual1!=comAtual3&&comAtual1!=comAtual4&&comAtual1!=comAtual5){
+		funcJogador2="Morto";
+		alert("Voce estava sozinho com "+corJogador2+", voce matou ele");
+	} else if (comAtual1!=comAtual2&&comAtual1==comAtual3&&comAtual1!=comAtual4&&comAtual1!=comAtual5){
+		funcJogador3="Morto";
+		alert("Voce estava sozinho com "+corJogador3+", voce matou ele");
+	} else if (comAtual1!=comAtual2&&comAtual1!=comAtual3&&comAtual1==comAtual4&&comAtual1!=comAtual5){
+		funcJogador4="Morto";
+		alert("Voce estava sozinho com "+corJogador4+", voce matou ele");
+	} else if (comAtual1!=comAtual2&&comAtual1!=comAtual3&&comAtual1!=comAtual4&&comAtual1==comAtual5){
+		funcJogador5="Morto";
+		alert("Voce estava sozinho com "+corJogador5+", voce matou ele");
+	} else if (comAtual1!=comAtual2&&comAtual1!=comAtual3&&comAtual1!=comAtual4&&comAtual1!=comAtual5){
+		alert("Voce estava sozinho, nao matou ninguem");
+	} else if (comAtual1!=comAtual2&&comAtual1!=comAtual3&&comAtual1!=comAtual4&&comAtual1!=comAtual5){
+		funcJogador1="Morto";
+		funcJogador2="Morto";
+		alert("Voce mata o "+corJogador2+" mas o "+corJogador3+", "+corJogador4+" e o "+corJogador5+" te deduram");
+}}
+//O Jogador 2 (Bot 1) como impostor
+if (funcJogador2==impo){
+	funReal1="impostor";
+	if (comAtual1==comAtual2&&comAtual2==comAtual3&&comAtual2!=comAtual4&&comAtual2!=comAtual5){
+		funcJogador2="Morto";
+		funcJogador1="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador2+" te mata, porem o "+corJogador3+" o dedura");
+	} else if (comAtual1!=comAtual2&&comAtual2==comAtual3&&comAtual2==comAtual4&&comAtual2!=comAtual5){
+		funcJogador2="Morto";
+		funcJogador3="Morto";
+		funReal1="Morto";
+	alert("O "+corJogador2+" mata o "+corJogador3+", porem o "+corJogador4+" o dedura");
+	} else if (comAtual1!=comAtual2&&comAtual2!=comAtual3&&comAtual2==comAtual4&&comAtual2==comAtual5){
+		funcJogador2="Morto";
+		funcJogador3="Morto";
+		funReal1="Morto";
+	alert("O "+corJogador2+" mata o "+corJogador4+", porem o "+corJogador5+" o dedura");
+	} else if (comAtual1==comAtual2&&comAtual2!=comAtual3&&comAtual2==comAtual4&&comAtual2!=comAtual5){
+		funcJogador2="Morto";
+		funcJogador1="Morto";
+		funReal1="Morto";
+	alert("O "+corJogador2+" mata voce, porem o "+corJogador4+" o dedura");
+	} else if (comAtual1==comAtual2&&comAtual2!=comAtual3&&comAtual2!=comAtual4&&comAtual2==comAtual5){
+		funcJogador2="Morto";
+		funcJogador1="Morto";
+		funReal1="Morto";
+	alert("O "+corJogador2+" mata voce, porem o "+corJogador5+" o dedura");
+	} else if (comAtual1!=comAtual2&&comAtual2==comAtual3&&comAtual2!=comAtual4&&comAtual2==comAtual5){
+		funcJogador2="Morto";
+		funcJogador3="Morto";
+		funReal1="Morto";
+	alert("O "+corJogador2+" mata o "+corJogador3+", porem o "+corJogador5+" o dedura");
+	} else if (comAtual2==comAtual1&&comAtual2==comAtual3&&comAtual2==comAtual4&&comAtual2==comAtual5){
+		funcJogador2="Morto";
+		funcJogador1="Morto";
+		funReal1="Morto";
+	alert("O "+corJogador2+" mata voce, porem o "+corJogador3+", "+corJogador4+", "+corJogador5+" o deduram");
+	} else if (comAtual2!=comAtual1&&comAtual2==comAtual3&&comAtual2==comAtual4&&comAtual2==comAtual5){
+		funcJogador2="Morto";
+		funcJogador3="Morto";
+		funReal1="Morto";
+	alert("O "+corJogador2+" mata o "+corJogador3+", porem "+corJogador4+" e "+corJogador5+" o deduram");
+	} else if (comAtual2==comAtual1&&comAtual2==comAtual3&&comAtual2==comAtual4&&comAtual2!=comAtual5){
+		funcJogador2="Morto";
+		funcJogador1="Morto";
+		funReal1="Morto";
+	alert("O "+corJogador2+" mata voce, porem o "+corJogador3+" e "+corJogador4+" o deduram");
+	} else if (comAtual2==comAtual1&&comAtual2!=comAtual3&&comAtual2==comAtual4&&comAtual2==comAtual5){
+		funcJogador2="Morto";
+		funcJogador1="Morto";
+	alert("O "+corJogador2+" mata voce, porem o "+corJogador4+" e "+corJogador5+" o deduram");
+	} else if (comAtual2==comAtual1&&comAtual2==comAtual3&&comAtual2!=comAtual4&&comAtual2==comAtual5){
+		funcJogador2="Morto";
+		funcJogador1="Morto";
+		funReal1="Morto";
+	alert("O "+corJogador2+" mata voce, porem o "+corJogador3+" e "+corJogador5+" o deduram");
+	} else if (comAtual2==comAtual1&&comAtual2!=comAtual3&&comAtual2!=comAtual4&&comAtual2!=comAtual5){
+		funcJogador1="Morto";
+		alert("Voce morreu por: "+corJogador2);
+	} else if (comAtual2!=comAtual1&&comAtual2==comAtual3&&comAtual2!=comAtual4&&comAtual2!=comAtual5){
+		funcJogador3="Morto";
+	} else if (comAtual2!=comAtual1&&comAtual2!=comAtual3&&comAtual2==comAtual4&&comAtual2!=comAtual5){
+		funcJogador4="Morto";
+	} else if (comAtual2!=comAtual1&&comAtual2!=comAtual3&&comAtual2!=comAtual4&&comAtual2==comAtual5){
+		funcJogador5="Morto";
+}}
+//O Jogador 3 (Bot 2) como impostor
+if (funcJogador3==impo){
+	funReal1="impostor";
+	if (comAtual3==comAtual1&&comAtual3!=comAtual2&&comAtual3!=comAtual4&&comAtual3!=comAtual5){
+		funcJogador1="Morto";
+		alert("O "+corJogador3+" te matou");
+	} else if (comAtual3!=comAtual1&&comAtual3==comAtual2&&comAtual3!=comAtual4&&comAtual3!=comAtual5){
+		funcJogador2="Morto";
+	} else if (comAtual3!=comAtual1&&comAtual3!=comAtual2&&comAtual3==comAtual4&&comAtual3!=comAtual5){
+		funcJogador4="Morto";
+	} else if (comAtual3!=comAtual1&&comAtual3!=comAtual2&&comAtual3!=comAtual4&&comAtual3==comAtual5){
+		funcJogador5="Morto";
+	} else if (comAtual3==comAtual1&&comAtual3==comAtual2&&comAtual3!=comAtual4&&comAtual3!=comAtual5){
+		funcJogador3="Morto";
+		funcJogador1="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador3+" te matou porem o "+corJogador2+" o dedura");
+	} else if (comAtual3==comAtual1&&comAtual3!=comAtual2&&comAtual3==comAtual4&&comAtual3!=comAtual5){
+		funcJogador3="Morto";
+		funcJogador1="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador3+" te matou porem o "+corJogador4+" o dedura");
+	} else if (comAtual3==comAtual1&&comAtual3!=comAtual2&&comAtual3!=comAtual4&&comAtual3==comAtual5){
+		funcJogador3="Morto";
+		funcJogador1="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador3+" te matou porem o "+corJogador5+" o dedura");
+	} else if (comAtual3!=comAtual1&&comAtual3==comAtual2&&comAtual3==comAtual4&&comAtual3!=comAtual5){
+		funcJogador3="Morto";
+		funcJogador2="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador3+" matou o "+corJogador2+", porem o "+corJogador4+" o dedura");
+	} else if (comAtual3!=comAtual1&&comAtual3==comAtual2&&comAtual3!=comAtual4&&comAtual3==comAtual5){
+		funcJogador3="Morto";
+		funcJogador2="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador3+" matou o "+corJogador2+", porem o "+corJogador5+" o dedura");
+	} else if (comAtual3!=comAtual1&&comAtual3!=comAtual2&&comAtual3==comAtual4&&comAtual3==comAtual5){
+		funcJogador3="Morto";
+		funcJogador2="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador3+" matou o "+corJogador4+", porem o "+corJogador5+" o dedura");
+	} else if (comAtual3==comAtual1&&comAtual3==comAtual2&&comAtual3==comAtual4&&comAtual3!=comAtual5){
+		funcJogador3="Morto";
+		funcJogador1="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador3+" matou voce, porem o "+corJogador2+" e o "+corJogador4+" o deduram");
+	} else if (comAtual3==comAtual1&&comAtual3!=comAtual2&&comAtual3==comAtual4&&comAtual3==comAtual5){
+		funcJogador3="Morto";
+		funcJogador1="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador3+" matou voce, porem o "+corJogador4+" e o "+corJogador5+" o deduram");
+	} else if (comAtual3!=comAtual1&&comAtual3==comAtual2&&comAtual3==comAtual4&&comAtual3==comAtual5){
+		funcJogador3="Morto";
+		funcJogador2="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador3+" matou o "+corJogador2+", porem o "+corJogador4+" e o "+corJogador5+" o deduram");
+	} else if (comAtual3==comAtual1&&comAtual3==comAtual2&&comAtual3!=comAtual4&&comAtual3==comAtual5){
+		funcJogador3="Morto";
+		funcJogador1="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador3+" matou voce, porem o "+corJogador2+" e o "+corJogador5+" o deduram");
+	} else if (comAtual3==comAtual1&&comAtual3==comAtual2&&comAtual3==comAtual4&&comAtual3==comAtual5){
+		funcJogador3="Morto";
+		funcJogador1="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador3+" matou voce, porem o "+corJogador2+", "+corJogador4+" e o "+corJogador5+" o deduram");
+}}
+//O Jogador 4 (Bot 3) como impostor
+if (funcJogador4==impo){
+	funReal1="impostor";
+	if (comAtual4==comAtual1&&comAtual4!=comAtual2&&comAtual4!=comAtual3&&comAtual4!=comAtual5){
+		funcJogador1="Morto";
+		alert("O "+corJogador4+" te mata");
+	} else if (comAtual4==comAtual1&&comAtual4==comAtual2&&comAtual4!=comAtual3&&comAtual4!=comAtual5){
+		funcJogador1="Morto";
+		funcJogador4="Morto";
+		funReal1="Morto";
+		alert("Voce foi morto por "+corJogador4+" porem o "+corJogador2+" o dedura");
+	} else if (comAtual4==comAtual1&&comAtual4!=comAtual2&&comAtual4==comAtual3&&comAtual4!=comAtual5){
+		funcJogador1="Morto";
+		funcJogador4="Morto";
+		funReal1="Morto";
+		alert("Voce foi morto por "+corJogador4+" porem o "+corJogador3+" o dedura");
+	} else if (comAtual4==comAtual1&&comAtual4!=comAtual2&&comAtual4!=comAtual3&&comAtual4==comAtual5){
+		funcJogador1="Morto";
+		funcJogador4="Morto";
+		funReal1="Morto";
+		alert("Voce foi morto por "+corJogador4+" porem o "+corJogador5+" o dedura");
+	} else if (comAtual4==comAtual1&&comAtual4==comAtual2&&comAtual4==comAtual3&&comAtual4!=comAtual5){
+		funcJogador1="Morto";
+		funcJogador4="Morto";
+		funReal1="Morto";
+		alert("Voce foi morto por "+corJogador4+" porem o "+corJogador2+" e o "+corJogador3+" o deduram");
+	} else if (comAtual4==comAtual1&&comAtual4==comAtual2&&comAtual4!=comAtual3&&comAtual4==comAtual5){
+		funcJogador1="Morto";
+		funcJogador4="Morto";
+		funReal1="Morto";
+		alert("Voce foi morto por "+corJogador4+" porem o "+corJogador2+" e o "+corJogador5+" o deduram");
+	} else if (comAtual4==comAtual1&&comAtual4!=comAtual2&&comAtual4==comAtual3&&comAtual4==comAtual5){
+		funcJogador1="Morto";
+		funcJogador4="Morto";
+		funReal1="Morto";
+		alert("Voce foi morto por "+corJogador4+" porem o "+corJogador3+" e o "+corJogador5+" o deduram");
+	} else if (comAtual4!=comAtual1&&comAtual4==comAtual2&&comAtual4==comAtual3&&comAtual4==comAtual5){
+		funcJogador2="Morto";
+		funcJogador4="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador4+" mata o "+corJogador2+", porem o "+corJogador3+" e o "+corJogador5+" o deduram");
+	} else if (comAtual4!=comAtual1&&comAtual4==comAtual2&&comAtual4!=comAtual3&&comAtual4!=comAtual5){
+		funcJogador2="Morto";
+	} else if (comAtual4!=comAtual1&&comAtual4!=comAtual2&&comAtual4==comAtual3&&comAtual4!=comAtual5){
+		funcJogador3="Morto";
+	} else if (comAtual4!=comAtual1&&comAtual4!=comAtual2&&comAtual4!=comAtual3&&comAtual4==comAtual5){
+		funcJogador5="Morto";
+	} else if (comAtual4!=comAtual1&&comAtual4==comAtual2&&comAtual4==comAtual3&&comAtual4!=comAtual5){
+		funcJogador2="Morto";
+		funcJogador4="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador4+" mata o "+corJogador2+", porem o "+corJogador3+" o dedura");
+	} else if (comAtual4!=comAtual1&&comAtual4==comAtual2&&comAtual4!=comAtual3&&comAtual4==comAtual5){
+		funcJogador2="Morto";
+		funcJogador4="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador4+" mata o "+corJogador2+", porem o "+corJogador5+" o dedura");
+	} else if (comAtual4!=comAtual1&&comAtual4!=comAtual2&&comAtual4==comAtual3&&comAtual4==comAtual5){
+		funcJogador3="Morto";
+		funcJogador4="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador4+" mata o "+corJogador3+", porem o "+corJogador5+" o dedura");
+	} else if (comAtual4==comAtual1&&comAtual4==comAtual2&&comAtual4==comAtual3&&comAtual4==comAtual5){
+		funcJogador1="Morto";
+		funcJogador4="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador4+" mata voce, porem o "+corJogador2+", "+corJogador3+" e "+corJogador5+" o deduram");
+}}
+//O Jogador 5 (Bot 4) como impostor
+if (funcJogador5==impo){
+	funReal1="impostor";
+	if (comAtual5==comAtual1&&comAtual5!=comAtual2&&comAtual5!=comAtual3&&comAtual5!=comAtual4){
+		funcJogador1="Morto";
+		alert("O "+corJogador5+" te mata");
+	} else if (comAtual5==comAtual1&&comAtual5==comAtual2&&comAtual5!=comAtual3&&comAtual5!=comAtual4){
+		funcJogador1="Morto";
+		funcJogador5="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador5+" te mata porem o "+corJogador2+" o dedura");
+	} else if (comAtual5==comAtual1&&comAtual5!=comAtual2&&comAtual5==comAtual3&&comAtual5!=comAtual4){
+		funcJogador1="Morto";
+		funcJogador5="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador5+" te mata porem o "+corJogador3+" o dedura");
+	} else if (comAtual5==comAtual1&&comAtual5!=comAtual2&&comAtual5!=comAtual3&&comAtual5==comAtual4){
+		funcJogador1="Morto";
+		funcJogador5="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador5+" te mata porem o "+corJogador4+" o dedura");
+	} else if (comAtual5==comAtual1&&comAtual5==comAtual2&&comAtual5==comAtual3&&comAtual5!=comAtual4){
+		funcJogador1="Morto";
+		funcJogador5="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador5+" te mata porem o "+corJogador2+" e o "+corJogador3+" o deduram");
+	} else if (comAtual5==comAtual1&&comAtual5!=comAtual2&&comAtual5==comAtual3&&comAtual5==comAtual4){
+		funcJogador1="Morto";
+		funcJogador5="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador5+" te mata porem o "+corJogador3+" e o "+corJogador4+" o deduram");
+	} else if (comAtual5==comAtual1&&comAtual5==comAtual2&&comAtual5!=comAtual3&&comAtual5==comAtual4){
+		funcJogador1="Morto";
+		funcJogador5="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador5+" te mata porem o "+corJogador2+" e o "+corJogador4+" o deduram");
+	} else if (comAtual5!=comAtual1&&comAtual5==comAtual2&&comAtual5!=comAtual3&&comAtual5!=comAtual4){
+		funcJogador2="Morto";
+	} else if (comAtual5!=comAtual1&&comAtual5==comAtual2&&comAtual5==comAtual3&&comAtual5!=comAtual4){
+		funcJogador2="Morto";
+		funcJogador5="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador5+" mata o "+corJogador2+" porem o "+corJogador3+" o dedura");
+	} else if (comAtual5!=comAtual1&&comAtual5==comAtual2&&comAtual5!=comAtual3&&comAtual5==comAtual4){
+		funcJogador2="Morto";
+		funcJogador5="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador5+" mata o "+corJogador2+" porem o "+corJogador4+" o dedura");
+	} else if (comAtual5!=comAtual1&&comAtual5==comAtual2&&comAtual5==comAtual3&&comAtual5==comAtual4){
+		funcJogador2="Morto";
+		funcJogador5="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador5+" mata o "+corJogador2+" porem o "+corJogador3+" e o "+corJogador4+" o deduram");
+	} else if (comAtual5!=comAtual1&&comAtual5!=comAtual2&&comAtual5==comAtual3&&comAtual5!=comAtual4){
+		funcJogador3="Morto";
+	} else if (comAtual5!=comAtual1&&comAtual5!=comAtual2&&comAtual5==comAtual3&&comAtual5==comAtual4){
+		funcJogador3="Morto";
+		funcJogador5="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador5+" mata o "+corJogador3+" porem o "+corJogador4+" o dedura");
+	} else if (comAtual5!=comAtual1&&comAtual5!=comAtual2&&comAtual5!=comAtual3&&comAtual5==comAtual4){
+		funcJogador4="Morto";
+	} else if (comAtual5==comAtual1&&comAtual5==comAtual2&&comAtual5==comAtual3&&comAtual5==comAtual4){
+		funcJogador1="Morto";
+		funcJogador5="Morto";
+		funReal1="Morto";
+		alert("O "+corJogador5+" te mata mas o "+corJogador2+", "+corJogador3+" e o "+corJogador4+" o deduram");
+}}
+//Voce como tripulante
+if (funcJogador1==trip1){ 
+	if (comAtual1!=comAtual2&&comAtual2!=comAtual3&&comAtual2!=comAtual4&&comAtual2!=comAtual5){
+		alert("Voce esta sozinho, ninguem te mata");
+	}
+	if (comAtual1==comAtual2&&funcJogador2!=impo){
+		alert("Voce esta com "+corJogador2+", ele nao te mata");
+	}
+	if (comAtual1==comAtual3&&funcJogador3!=impo){
+		alert("Voce esta com "+corJogador3+", ele nao te mata");
+	}
+	if (comAtual1==comAtual4&&funcJogador4!=impo){
+		alert("Voce esta com "+corJogador4+", ele nao te mata");
+	}
+	if (comAtual1==comAtual5&&funcJogador5!=impo){
+		alert("Voce esta com "+corJogador5+", ele nao te mata");
+	}
+	if (comAtual1==comAtual2&&comAtual1==comAtual3&&funcJogador2!=impo&&funcJogador3!=impo){
+		alert("Voce esta com "+corJogador2+" e com "+corJogador3+", eles nao te matam");
+	}
+	if (comAtual1==comAtual2&&comAtual1==comAtual4&&funcJogador2!=impo&&funcJogador4!=impo){
+		alert("Voce esta com "+corJogador2+" e com "+corJogador4+", eles nao te matam");
+	}
+	if (comAtual1==comAtual2&&comAtual1==comAtual5&&funcJogador2!=impo&&funcJogador5!=impo){
+		alert("Voce esta com "+corJogador2+" e com "+corJogador5+", eles nao te matam");
+	}
+	if (comAtual1==comAtual3&&comAtual1==comAtual4&&funcJogador3!=impo&&funcJogador4!=impo){
+		alert("Voce esta com "+corJogador3+" e com "+corJogador4+", eles nao te matam");
+	}
+	if (comAtual1==comAtual3&&comAtual1==comAtual5&&funcJogador3!=impo&&funcJogador5!=impo){
+		alert("Voce esta com "+corJogador3+" e com "+corJogador5+", eles nao te matam");
+	}
+	if (comAtual1==comAtual4&&comAtual1==comAtual5&&funcJogador4!=impo&&funcJogador5!=impo){
+		alert("Voce esta com "+corJogador4+" e com "+corJogador5+", eles nao te matam");
+	}
+	if (comAtual1==comAtual2&&comAtual1==comAtual3&&comAtual1==comAtual4&&funcJogador2!=impo&&funcJogador3!=impo&&funcJogador4!=impo){
+		alert("Voce esta com "+corJogador2+", com "+corJogador3+" e com "+corJogador4+", eles nao te matam");
+	}
+	if (comAtual1==comAtual3&&comAtual1==comAtual4&&comAtual1==comAtual5&&funcJogador3!=impo&&funcJogador4!=impo&&funcJogador5!=impo){
+		alert("Voce esta com "+corJogador3+", com "+corJogador4+" e com "+corJogador5+", eles nao te matam");
+	}
+	if (comAtual1==comAtual2&&comAtual1==comAtual4&&comAtual1==comAtual5&&funcJogador2!=impo&&funcJogador4!=impo&&funcJogador5!=impo){	
+		alert("Voce esta com "+corJogador2+", com "+corJogador4+" e com "+corJogador5+", eles nao te matam");
+	}
+	if (comAtual1==comAtual2&&comAtual1==comAtual3&&comAtual1==comAtual5&&funcJogador2!=impo&&funcJogador3!=impo&&funcJogador5!=impo){
+		alert("Voce esta com "+corJogador2+", com "+corJogador3+" e com "+corJogador5+", eles nao te matam");
+}}
+	if (i==1||i==2||i==3||i==4||i==5||i==6||i==7||i==8||i==9||i==10){
+		if (funcJogador2=="Morto"&&funcJogador3!="Morto"&&funcJogador4!="Morto"&&funcJogador5!="Morto") {
+			alert("Jogador: "+corJogador2+" morto");
+		}
+		if (funcJogador2!="Morto"&&funcJogador3=="Morto"&&funcJogador4!="Morto"&&funcJogador5!="Morto") {
+			alert("Jogador: "+corJogador3+" morto");
+		}
+		if (funcJogador2!="Morto"&&funcJogador3!="Morto"&&funcJogador4=="Morto"&&funcJogador5!="Morto") {
+			alert("Jogador: "+corJogador4+" morto");
+		}
+		if (funcJogador2!="Morto"&&funcJogador3!="Morto"&&funcJogador4!="Morto"&&funcJogador5=="Morto") {
+			alert("Jogador: "+corJogador5+" morto");
+		}
+		if (funcJogador2=="Morto"&&funcJogador3=="Morto"&&funcJogador4!="Morto"&&funcJogador5!="Morto") {
+			alert("Jogador: "+corJogador2+" morto\nJogador: "+corJogador3+" morto");
+		}
+		if (funcJogador2=="Morto"&&funcJogador3!="Morto"&&funcJogador4=="Morto"&&funcJogador5!="Morto") {
+			alert("Jogador: "+corJogador2+" morto\nJogador: "+corJogador4+" morto");
+		}
+		if (funcJogador2=="Morto"&&funcJogador3!="Morto"&&funcJogador4!="Morto"&&funcJogador5=="Morto") {
+			alert("Jogador: "+corJogador2+" morto\nJogador: "+corJogador5+" morto");
+		}
+		if (funcJogador2!="Morto"&&funcJogador3=="Morto"&&funcJogador4=="Morto"&&funcJogador5!="Morto") {
+			alert("Jogador: "+corJogador3+" morto\nJogador: "+corJogador4+" morto");
+		}
+		if (funcJogador2!="Morto"&&funcJogador3=="Morto"&&funcJogador4!="Morto"&&funcJogador5=="Morto") {
+			alert("Jogador: "+corJogador3+" morto\nJogador: "+corJogador5+" morto");
+		}
+		if (funcJogador2!="Morto"&&funcJogador3!="Morto"&&funcJogador4=="Morto"&&funcJogador5=="Morto") {
+			alert("Jogador: "+corJogador4+" morto\nJogador: "+corJogador5+" morto");
+		}
+		if (funcJogador2=="Morto"&&funcJogador3=="Morto"&&funcJogador4=="Morto"&&funcJogador5!="Morto") {
+			alert("Jogador: "+corJogador2+" morto\nJogador: "+corJogador3+" morto\nJogador: "+corJogador4+" morto");
+		}
+		if (funcJogador2=="Morto"&&funcJogador3!="Morto"&&funcJogador4=="Morto"&&funcJogador5=="Morto") {
+			alert("Jogador: "+corJogador2+" morto\nJogador: "+corJogador4+" morto\nJogador: "+corJogador5+" morto");
+		}
+		if (funcJogador2!="Morto"&&funcJogador3=="Morto"&&funcJogador4=="Morto"&&funcJogador5=="Morto") {
+			alert("Jogador: "+corJogador3+" morto\nJogador: "+corJogador4+" morto\nJogador: "+corJogador5+" morto");
+		}
+		if (funcJogador2=="Morto"&&funcJogador3=="Morto"&&funcJogador4!="Morto"&&funcJogador5=="Morto") {
+			alert("Jogador: "+corJogador2+" morto\nJogador: "+corJogador3+" morto\nJogador: "+corJogador5+" morto");
+		}
+		if (funcJogador2=="Morto"&&funcJogador3=="Morto"&&funcJogador4=="Morto"&&funcJogador5=="Morto") {
+			alert("Jogador: "+corJogador2+" morto\nJogador: "+corJogador3+" morto\nJogador: "+corJogador4+" morto\nJogador: "+corJogador5+" morto");
+		}
+
+
+	}
+if (funcJogador1=="Morto"||funReal1=="Morto"||(funcJogador2=="Morto"&&funcJogador3=="Morto"&&funcJogador4=="Morto"&&funcJogador5=="Morto")){
+	break;
+}
+}
